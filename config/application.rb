@@ -1,6 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
+require 'csv'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -18,7 +19,8 @@ module Grapher
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
-      g.helper falseg.test_framework false
+      g.helper false
+      g.test_framework false
     end
   end
 end
