@@ -63,7 +63,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
 
-gem 'roo'
 
-gem "chartkick"
-gem 'chartable'
+gem 'roo'
