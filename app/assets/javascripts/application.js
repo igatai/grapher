@@ -10,8 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require chartkick
-//= require Chart.bundle
+// require Chart.bundle
 //= require highcharts/highcharts
-//= require highcharts/highcharts-more
-//= require highcharts/highstock
+//= require chartkick
+// require highcharts/highcharts-more
+// require highcharts/highstock

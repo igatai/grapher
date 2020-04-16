@@ -2,17 +2,17 @@
   %h1
     = "Houseデータのグラフ"
   .wrapper__guide
-    = "csvファイルをインポートしてグラフを表示します"
+    = "インポートしたHouseデータ（csv）のグラフを表示します"
 
   .wrapper__chart
     .wrapper__chart__first
-      = high_chart("my_chart", @chart)
-    .wrapper__chart__second
       = high_chart("my_chart2", @chart2)
+    .wrapper__chart__second
+      = high_chart("my_chart3", @chart3)
 
   .wrapper__import
     .wrapper__import__guide
-      = "ファイルインポート"
+      = "グラフ表示させるHouseデータを選択してインポートしてください"
     .wrapper__import__button
       = form_tag import_houses_path, multipart: true do
         = file_field_tag :file
