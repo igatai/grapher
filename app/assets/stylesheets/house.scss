@@ -15,6 +15,9 @@
     padding: 30px 20px;
     display: flex;
     justify-content: space-around;
+    background-color: skyblue;
+    margin: 40px 20px;
+    border-radius: 50px;
     &__first {
     }
     &__second {
@@ -24,8 +27,8 @@
   &__import {
     margin: 10px auto;
     height: 80px;
-    width: 500px;
-    border-radius: 20px;
+    width: 700px;
+    border-radius: 80px;
     color: white;
     background-color: gray;
     text-align: center;
