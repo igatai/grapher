@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 2020_04_14_021231) do
 
   create_table "houses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "city"
+    t.string "Firstname"
+    t.string "Lastname"
+    t.string "City"
     t.integer "num_of_people"
     t.string "has_child"
     t.datetime "created_at", null: false
