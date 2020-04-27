@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   resources :houses do
     collection { post :import }
   end
+  resources :productions do
+    collection { post :import }
+  end
 end

@@ -11,12 +11,21 @@
       = high_chart("my_chart3", @chart3)
 
   .wrapper__import
-    .wrapper__import__guide
-      = "グラフ表示させるHouseデータを選択してインポートしてください"
-    .wrapper__import__button
-      = form_tag import_houses_path, multipart: true do
-        = file_field_tag :file
-        = submit_tag "インポート"
+    .wrapper__import__house
+      .wrapper__import__house__guide
+        = "グラフ表示させるHouseデータを選択してインポートしてください"
+      .wrapper__import__house__button
+        = form_tag import_houses_path, multipart: true do
+          = file_field_tag :file
+          = submit_tag "インポート"
+
+    .wrapper__import__production
+      .wrapper__import__production__guide
+        = "グラフ表示させEnergyProductionデータを選択してインポートしてください"
+      .wrapper__import__production__button
+        = form_tag import_productions_path, multipart: true do
+          = file_field_tag :file
+          = submit_tag "インポート"
 
   -# %table.wrapper__table
   -#   %thead
