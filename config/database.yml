@@ -54,5 +54,5 @@ production:
   # password: <%= ENV['GRAPHER_DATABASE_PASSWORD'] %>
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  # socket: /var/lib/mysql/mysql.sock
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
+  # socket: /tmp/mysql.sock
