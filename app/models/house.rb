@@ -7,6 +7,9 @@ class House < ApplicationRecord
     end
   end
   def self.updatable_attributes
-    ["id", "first_name", "last_name", "city", "num_of_people", "has_child"]
+    ["id", "Firstname", "Lastname", "City", "num_of_people", "has_child"]
   end
+
+  has_many :products, dependent: :destroy
+
 end

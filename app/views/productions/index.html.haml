@@ -1,0 +1,27 @@
+.wrapper
+  %h1
+    = "EnergyProductionデータのグラフ"
+  .wrapper__guide
+    = "インポートしたEnergyProductionデータ（csv）のグラフを表示します"
+
+  .wrapper__chart
+    .wrapper__chart__first
+      = high_chart("my_chart", @chart)
+
+  .wrapper__import
+    -# .wrapper__import__house
+    -#   .wrapper__import__house__guide
+    -#     = "グラフ表示させるHouseデータを選択してインポートしてください"
+    -#   .wrapper__import__house__button
+    -#     = form_tag import_houses_path, multipart: true do
+    -#       = file_field_tag :file
+    -#       = submit_tag "インポート"
+    .wrapper__import__production
+      .wrapper__import__production__guide
+        = "グラフ表示させEnergyProductionデータを選択してインポートしてください"
+      .wrapper__import__production__button
+        = form_tag import_productions_path, multipart: true do
+          = file_field_tag :file
+          = submit_tag "インポート"
+      .wrapper__import__house__guide2
+        = "※ データのヘッダーは次の通り: (id,Label,House_id,Year,Month,Temperature,Daylight,EnergyProduction )"
