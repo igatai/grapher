@@ -21,13 +21,15 @@
           = submit_tag "インポート"
       .wrapper__import__house__guide2
         = "※ データのヘッダーは次の通り: ( Firstname,Lastname,City,num_of_people,has_child )"
-    -# .wrapper__import__production
-    -#   .wrapper__import__production__guide
-    -#     = "グラフ表示させEnergyProductionデータを選択してインポートしてください"
-    -#   .wrapper__import__production__button
-    -#     = form_tag import_productions_path, multipart: true do
-    -#       = file_field_tag :file
-    -#       = submit_tag "インポート"
+    .wrapper__import__production
+      .wrapper__import__production__guide
+        = "② EnergyProductionデータを選択してインポートしてください"
+      .wrapper__import__production__button
+        = form_tag import_productions_path, multipart: true do
+          = file_field_tag :file
+          = submit_tag "インポート"
+      .wrapper__import__house__guide2
+        = "※ データのヘッダーは次の通り: (id,Label,House_id,Year,Month,Temperature,Daylight,EnergyProduction )"
 
   -# %table.wrapper__table
   -#   %thead

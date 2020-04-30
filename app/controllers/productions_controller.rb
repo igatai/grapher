@@ -4,7 +4,8 @@ class ProductionsController < ApplicationController
     cities = House.pluck(:city).uniq.sort
     # month = [7,8,9,10,11,12,1,2,3,4,5,6,7,8,9,10,11,12,1,2,3,4,5,6]
     month = Production.where(House_id: 1).pluck(:Month)
-    label_num = (0..23).to_a
+    # label_num = (0..23).to_a
+    label_num = Production.where(House_id: 1).pluck(:Label)
     @chart = LazyHighCharts::HighChart.new("graph") do |c|
       c.title(text: "Avarage of energy production by erea")
       c.xAxis(categories: month, title: {text: 'month' } )
@@ -26,6 +27,7 @@ class ProductionsController < ApplicationController
           end
           # 月毎に処理
           for num in label_num do
+            # binding.pry
             energy_productions_array[num] += productions.find_by(label: num).EnergyProduction
           end
         end
