@@ -8,7 +8,7 @@ class Production < ApplicationRecord
     end
   end
   def self.updatable_attributes
-    ["id", "Label", "House_id", "Year", "Month", "Temperature", "Daylight", "EnergyProduction" ]
+    ["id", "Label", "house_id", "Year", "Month", "Temperature", "Daylight", "EnergyProduction" ]
   end
 
   belongs_to :house
