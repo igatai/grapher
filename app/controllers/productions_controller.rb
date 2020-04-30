@@ -44,6 +44,6 @@ class ProductionsController < ApplicationController
 
   def import
     Production.import(params[:file])
-    redirect_to productions_path
+    redirect_to productions_url
   end
 end
